@@ -22,6 +22,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
+
 body::before {
   content: "";
   position: fixed;
@@ -105,7 +106,7 @@ img { max-width: 100%; }
 .text-link { padding: 6px 0; border-bottom: 1px solid var(--line); font: 500 12px "DM Mono", monospace; }
 .text-link span { color: var(--orange); }
 
-.hero-sidebar { align-self: end; margin-bottom: 100px; padding: 26px; border: 1px solid var(--line); background: rgba(14,17,24,.58); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,.2); }
+.hero-sidebar { align-self: end; margin-bottom: 100px; padding: 26px; border: 1px solid var(--line); background: rgba(14,17,24,.58); backdrop-filter: blur(18px); box-shadow: 0 24px 80px rgba(0,0,0,.2);}
 .eyebrow { margin: 0 0 24px; font: 500 10px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .12em; }
 .hero-sidebar > .eyebrow { padding-top: 14px; color: var(--muted); }
 .quick-stats { margin: 0; }
@@ -233,8 +234,8 @@ img { max-width: 100%; }
   .menu-toggle { display: block; padding: 10px 14px; border: 1px solid var(--line); background: rgba(255,255,255,.04); color: var(--ink); font-size: 12px; font-weight: 700; }
   .mobile-menu.open { display: flex; position: absolute; top: 84px; left: 28px; right: 28px; flex-direction: column; gap: 0; padding: 12px 20px; background: rgba(8,10,15,.96); color: var(--white); border: 1px solid var(--line); backdrop-filter: blur(18px); }
   .mobile-menu a { padding: 13px 0; border-bottom: 1px solid #3b3f37; }
-  .hero { grid-template-columns: 1fr; gap: 70px; padding-bottom: 90px; }
-  .hero-sidebar { width: 100%; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .hero { grid-template-columns: 1fr; gap: 70px; padding-bottom: 90px; padding-right: 60px;}
+  .hero-sidebar { width: 100%; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding-right: 40px; }
   .hero-sidebar > .eyebrow { grid-column: 1 / -1; }
   .section-heading { grid-template-columns: 1fr 1fr; gap: 35px; }
   .section-heading .eyebrow { grid-column: 1 / -1; }
@@ -248,11 +249,11 @@ img { max-width: 100%; }
 }
 
 @media (max-width: 640px) {
-  .shell { width: min(calc(100% - 40px), var(--max)); }
+  .shell { width: min(calc(100% - 20px), var(--max)); }
   .header-inner { height: 76px; }
-  .hero { min-height: auto; padding-top: 145px; }
+  .hero { min-height: auto; padding-top: 145px; padding-right: 60px;}
   .hero h1 { font-size: clamp(3.6rem, 17vw, 5rem); }
-  .hero-sidebar { grid-template-columns: 1fr; gap: 10px; }
+  .hero-sidebar { grid-template-columns: 1fr; gap: 10px; padding-right: 40px;}
   .hero-sidebar > .eyebrow { grid-column: auto; }
   .section { padding: 95px 0; }
   .section-heading { grid-template-columns: 1fr; margin-bottom: 50px; }
